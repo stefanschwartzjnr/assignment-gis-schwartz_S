@@ -4,11 +4,6 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiZGplbWJlcGxheWVyIiwiYSI6ImNpdndlMnV0dDAwMGgyd
 //init map
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([48.2316156,17.5632506], 9);
-//L.control.locate({flyTo: true}).addTo(map);
-map.addControl(L.control.locate({
-       locateOptions: {
-               maxZoom: 14
-}}));
 
 //init empty featurelayer
 var featureLayer = L.mapbox.featureLayer().addTo(map);
@@ -47,3 +42,4 @@ function setCounter(count){
   $('.counter').text("Počet záznamov: " + count);
 
 }
+

@@ -3,11 +3,14 @@
 Táto aplikácia zobrazuje športoviská na Slovensku. K hlavným vlastnostiam patrí:
 - zobrazenie všetkých športovísk na Slovensku
 - vyhľadanie podľa typu športoviska
-- vyhľadanie podľa mojej polohy
+- vyhľadanie najbliťším športovísk podľa zadanej polohy a veľkosti rádiusu
+- vyhľadanie športovísk blízko rieky podľa zvolenej vzdialenosti
+- nájdenie najbližšieho parkoviska k danej polohe (športoviska)
+
 
 Náhľad aplikácie:
 
-![Screenshot](screenshot_f.png)
+![Screenshot](screenshot2.png)
 
 Aplikácia má dve samostatné časti. Klientskú časť tvorí [frontend webová aplikácia](#frontend) využívajúca MAPbox API a mopbox.js a [backend aplikácia](#backend) je v PHP frameworku [Laravel](https://laravel.com/), pričom dáta čerpá z PostGIS databázy. Frontend komunikuje s backendom cez Laravel [REST API](#api).
 
@@ -35,9 +38,9 @@ Informácie o športoviskách mám priamo z Open Street Máp. Tie som stiahol zo
 
 `http://localhost:8000/api?title=&choices%5B%5D=stadium&choices%5B%5D=pitch&limit=100`
 
-**Nájdi moju polohu**
+**Nájdi športoviská v okolí rieky Dunaj**
 
-`http://b.tiles.mapbox.com/v4/mapbox.streets/14/8970/5685.png?access_token={access token}}`
+`/api?title=&choices%5B%5D=stadium&choices%5B%5D=pitch&choices%5B%5D=sports_centre&choices%5B%5D=swimming_pool&choices%5B%5D=fitness_station&river=Dunaj&latitude=&longitude=&radius=1000`
 
 ### Response
 

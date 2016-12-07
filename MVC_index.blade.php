@@ -14,12 +14,6 @@
   </head>
 
   <body>
-
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.mapbox.css' rel='stylesheet' />
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/css/font-awesome.min.css' rel='stylesheet' />
-
-
   <div class="filter-wrap">
     <form id="filterForm">
       <input type="text" name="title" placeholder="Zadajte názov">
@@ -28,18 +22,41 @@
       <label for="choice3"><input type="checkbox" value="sports_centre" name="choices[]" id="choice3" checked>Športové stredisko</label>
       <label for="choice5"><input type="checkbox" value="swimming_pool" name="choices[]" id="choice5" checked>Plaváreň</label>
       <label for="choice6"><input type="checkbox" value="fitness_station" name="choices[]" id="choice6" checked>Fitnes centrum</label>
+<!--
       <select name="limit">
         <option value="100">100</option>
         <option value="200">200</option>
         <option value="500">500</option>
         <option value="1500">1500</option>
       </select>
+-->
+<br>
+      <input type="text" name="river" placeholder="Zadaj názov rieky">
+
+<br>
+      <input type="text" name="latitude" placeholder="Zadaj zem. šírku">
+      <input type="text" name="longitude" placeholder="Zadaj zem. dĺžku">
+      <label for="park_check"><input type="checkbox" value="mall" name="park_check" id="park_check">Zobraz najbližšie parkovisko</label>
+
+<br>
+      <select name="radius">
+        <option value="">radius</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+      </select>
+<br>
       <input class="btn btn-primary btn-sm" type="submit" value="Hľadať">
     </form>
   </div>
 
   <div class="counter"></div>
 
+  <!--
+      doplnit
+      radius
+      rivers
+   -->
 
   <div id="map"></div>
 
